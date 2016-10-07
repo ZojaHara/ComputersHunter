@@ -1,0 +1,19 @@
+
+@-webkit-keyframes opac {
+  100% {
+    opacity:1;
+  }
+}
+@keyframes opac {
+  100% {
+    opacity:1;
+  }
+}
+
+.opac {
+	-webkit-animation: opac 2s linear;
+  animation: opac 2s linear;
+	-webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  z-index: 3;
+}

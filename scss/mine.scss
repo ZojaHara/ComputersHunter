@@ -1,0 +1,95 @@
+$blue:rgb(50, 98, 249);
+$pink:rgb(232, 128, 224);
+
+section {
+	width:100vw;
+	height:100vh;
+}
+
+.centering {
+	top:50%;
+	left:50%;
+	-webkit-transform:translateY(-50%) translateX(-50%);
+	transform:translateY(-50%) translateX(-50%);
+}
+
+
+//Title and menu section
+
+.title__section {
+	background: url(../pic/computer-title.jpg);
+	background-size:cover;
+  opacity: .5;
+  -webkit-animation: opac 3s;
+  animation: opac 3s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+
+
+  .title__wrapper {
+    width:inherit;
+  	height:inherit;
+		position: relative;
+    background: rgba(0,0,0,.9);
+		overflow: hidden;
+		font-family: 'Ruslan Display', cursive;
+
+		.menu__pic {
+			display: block;
+			position: absolute;
+			cursor:pointer;
+		}
+		.menu__pic-hamburger {
+			width: 30vmin;
+			height: 30vmin;
+			z-index: 3;
+		}
+		.menu__pic-arrow {
+			width: 20vmin;
+			height: 20vmin;
+			opacity: 0;
+		}
+
+		.menu__items-left {
+			left:0;
+			top:-75%;
+		}
+		.menu__items-right {
+			right:0;
+			top:75%;
+		}
+
+		.menu__items {
+			width:50%;
+			height: 100vh;
+			font-size:10vmin;
+			color:$blue;
+			position: absolute;
+			z-index: 1;
+
+			.menu__words {
+				position: absolute;
+			}
+			.menu__words-left {
+				top: 85%;
+				left:5%;
+			}
+			.menu__words-why {
+				top: 15%;
+				left:15%;
+				color:$pink;
+			}
+			.menu__words-right {
+				top:5%;
+				right:5%;
+			}
+			.menu__words-try {
+				top:75%;
+				right:15%;
+				color:$pink;
+			}
+		}
+
+
+  }
+}
