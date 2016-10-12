@@ -1,8 +1,9 @@
 $blue:rgb(50, 98, 249);
 $pink:rgb(232, 128, 224);
 
+
+
 section {
-	width:100vw;
 	height:100vh;
 }
 
@@ -19,6 +20,7 @@ section {
 .title__section {
 	background: url(../pic/computer-title.jpg);
 	background-size:cover;
+	background-attachment: fixed;
   opacity: .5;
   -webkit-animation: opac 3s;
   animation: opac 3s;
@@ -30,7 +32,7 @@ section {
     width:inherit;
   	height:inherit;
 		position: relative;
-    background: rgba(0,0,0,.9);
+    background: rgba(40,40,40,.97);
 		overflow: hidden;
 		font-family: 'Ruslan Display', cursive;
 
@@ -92,4 +94,72 @@ section {
 
 
   }
+}
+
+
+
+// Description section
+
+@function side($length) {
+	$result: $length / 1.414;
+	@return $result;
+}
+
+.description__section {
+	background: rgba(40,40,40,.97);
+	position: relative;
+	display: flex;
+	&:hover .computer__anim-one{
+		animation: computer__anim-one 8s linear;
+		animation-fill-mode: forwards;
+	}
+	&:hover .computer__anim-two{
+		animation: computer__anim-two 8s linear;
+		animation-fill-mode: forwards;
+	}
+
+	.computer__anim {
+		width:20vmin;
+		height: 20vmin;
+		position: absolute;
+	}
+	.computer__anim-one {
+		top:10%;
+		left:10%
+	}
+	.computer__anim-two {
+		bottom:10%;
+		right:10%
+	}
+
+	.container__description {
+		width: side(100vmin);
+		height:side(100vmin);
+		margin: auto;
+		background: rgba(3, 91, 134, .5);
+		transform:rotate(45deg);
+		display: flex;
+		border:5px solid rgba(40,40,40,.9);
+		box-sizing: border-box;
+
+
+		.product__description {
+			width:80.7%;
+			height: 60.7%;
+			background: rgba(40,40,40,.7);
+			transform:rotate(-45deg);
+			margin: auto;
+			color:rgba(255, 255, 200, .5);
+			padding:1%;
+			box-sizing: border-box;
+			border:5px solid rgba(40,40,40,.8);
+
+			.product__details {
+				padding:1%;
+				font-family: 'Archivo Narrow', sans-serif;
+				font-size: 4.2vmin;
+				text-indent: 5%;
+			}
+		}
+	}
 }

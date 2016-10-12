@@ -1,5 +1,4 @@
 section {
-  width: 100vw;
   height: 100vh; }
 
 .centering {
@@ -11,6 +10,7 @@ section {
 .title__section {
   background: url(../pic/computer-title.jpg);
   background-size: cover;
+  background-attachment: fixed;
   opacity: .5;
   -webkit-animation: opac 3s;
   animation: opac 3s;
@@ -20,7 +20,7 @@ section {
     width: inherit;
     height: inherit;
     position: relative;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(40, 40, 40, 0.97);
     overflow: hidden;
     font-family: 'Ruslan Display', cursive; }
     .title__section .title__wrapper .menu__pic {
@@ -64,5 +64,50 @@ section {
         top: 75%;
         right: 15%;
         color: #e880e0; }
+
+.description__section {
+  background: rgba(40, 40, 40, 0.97);
+  position: relative;
+  display: flex; }
+  .description__section:hover .computer__anim-one {
+    animation: computer__anim-one 8s linear;
+    animation-fill-mode: forwards; }
+  .description__section:hover .computer__anim-two {
+    animation: computer__anim-two 8s linear;
+    animation-fill-mode: forwards; }
+  .description__section .computer__anim {
+    width: 20vmin;
+    height: 20vmin;
+    position: absolute; }
+  .description__section .computer__anim-one {
+    top: 10%;
+    left: 10%; }
+  .description__section .computer__anim-two {
+    bottom: 10%;
+    right: 10%; }
+  .description__section .container__description {
+    width: 70.72136vmin;
+    height: 70.72136vmin;
+    margin: auto;
+    background: rgba(3, 91, 134, 0.5);
+    transform: rotate(45deg);
+    display: flex;
+    border: 5px solid rgba(40, 40, 40, 0.9);
+    box-sizing: border-box; }
+    .description__section .container__description .product__description {
+      width: 80.7%;
+      height: 60.7%;
+      background: rgba(40, 40, 40, 0.7);
+      transform: rotate(-45deg);
+      margin: auto;
+      color: rgba(255, 255, 200, 0.5);
+      padding: 1%;
+      box-sizing: border-box;
+      border: 5px solid rgba(40, 40, 40, 0.8); }
+      .description__section .container__description .product__description .product__details {
+        padding: 1%;
+        font-family: 'Archivo Narrow', sans-serif;
+        font-size: 4.2vmin;
+        text-indent: 5%; }
 
 /*# sourceMappingURL=mine.css.map */
