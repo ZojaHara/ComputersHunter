@@ -15,6 +15,7 @@ section {
 }
 
 
+
 //Title and menu section
 
 .title__section {
@@ -106,7 +107,7 @@ section {
 }
 
 .description__section {
-	background: rgba(40,40,40,.97);
+	background:rgba(40,40,40,.97);
 	position: relative;
 	display: flex;
 	&:hover .computer__anim-one{
@@ -146,20 +147,89 @@ section {
 		.product__description {
 			width:80.7%;
 			height: 60.7%;
-			background: rgba(40,40,40,.7);
+			text-align: center;
 			transform:rotate(-45deg);
 			margin: auto;
 			color:rgba(255, 255, 200, .5);
-			padding:1%;
 			box-sizing: border-box;
-			border:5px solid rgba(40,40,40,.8);
 
 			.product__details {
 				padding:1%;
 				font-family: 'Archivo Narrow', sans-serif;
-				font-size: 4.2vmin;
+				font-size: 4.7vmin;
 				text-indent: 5%;
 			}
+			.product__details:first-of-type {
+				padding-bottom:5%;
+			}
 		}
+	}
+}
+
+// Computers hunter application
+
+.ch__application {
+	display: flex;
+	flex-direction: row;
+	.select__container {
+		flex:1 2;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		font-family: 'Ruslan Display', cursive;
+		background:linear-gradient(45deg, rgb(10,10,10), rgb(40,40,40));
+		color: rgba(255, 255, 220, .5);
+		fieldset {
+			width:80%;
+			position: relative;
+			label {
+				font-size: 3.5vmin;
+			}
+			.select__wrapper {
+				position: relative;
+				margin-top: 2%;
+				&::after {
+					content:"";
+					display:block;
+					position: absolute;
+					top:0%;
+					right:10%;
+					height:100%;
+					width:10%;
+					background: rgba(0, 39, 57, .95);
+					border:2px solid rgb(20,20,20);
+					box-sizing: border-box;
+				}
+				select {
+					width:90%;
+					font-family: inherit;
+					background: rgba(40,40,40,.7);
+					color:inherit;
+					font-size: 2.5vmin;
+					border:2px solid rgb(20,20,20);
+					cursor:grab;
+					option {
+						padding:1%;
+					}
+				}
+			}
+
+		}
+		.submit {
+			font-family: inherit;
+			background: rgba(10,10,10,.7);
+			border:none;
+			color:inherit;
+			font-size: 3vmin;
+			padding:1% 7%;
+		}
+	}
+	.product__photo {
+		background:repeating-linear-gradient(45deg, rgb(40,40,40) 0, rgb(40,40,40) 25%, rgb(50,50,50) 0, rgb(50,50,50) 50%);
+		background-size:100px 100px;
+		flex:6 1;
+		height: 100%;
 	}
 }
