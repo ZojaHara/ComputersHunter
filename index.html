@@ -29,24 +29,27 @@
 
 			<section class="title__section">
 
-				<div class="title__wrapper">
-					<img src="pic/menu-alt.svg" alt="computers-hunter menu" class="centering menu__pic menu__pic-hamburger">
-					<img src="pic/arrow.svg" alt="computers-hunter arrow-back" class="centering menu__pic menu__pic-arrow">
+				<img src="pic/menu-alt.svg" alt="computers-hunter menu" class="centering menu__pic menu__pic-hamburger">
+				<img src="pic/arrow.svg" alt="computers-hunter arrow-back" class="centering menu__pic menu__pic-arrow">
 
+				<div class="title__wrapper">
 					<div class="menu__items menu__items-left">
-						<p class="menu__words menu__words-left">Computers</p>
-						<p class="menu__words menu__words-why">What it is?</p>
+						<p class="menu__words menu__words-blue menu__words-left">Computers</p>
+						<p class="menu__words menu__words-pink menu__words-why">
+							<a href="#description__section">What it is?</a>
+						</p>
 					</div>
 					<div class="menu__items menu__items-right">
-						<p class="menu__words menu__words-right">Hunter</p>
-						<p class="menu__words menu__words-try">Try it please!</p>
+						<p class="menu__words menu__words-blue menu__words-right">Hunter</p>
+						<p class="menu__words menu__words-pink menu__words-try">
+							<a href="#ch__application">Try it please!</a>
+						</p>
 					</div>
-
 				</div>
 
 			</section>
 
-			<section class="description__section">
+			<section id="description__section" class="description__section">
 
 				<img src="pic/screen-2.svg" alt="computers-hunter background" class="computer__anim computer__anim-one">
 				<img src="pic/screen-2.svg" alt="computers-hunter background" class="computer__anim computer__anim-two">
@@ -64,15 +67,16 @@
 
 			</section>
 
-			<section class="ch__application">
+			<section id="ch__application" class="ch__application">
 
-				<form action="" method="" class="select__container">
+				<form action="" method="" id="myForm" class="select__container">
 
 					<fieldset>
 						<label for="CPU">CPU</label>
 
 						<div class="select__wrapper">
-							<select size=4 name="CPU" id="">
+							<select class="select"  name="CPU" id="cpu">
+								<option value="" disabled selected>Processor</option>
 								<option value="i7 quad">i7 quad</option>
 								<option value="i7 dual">i7 dual</option>
 								<option value="i5 quad">i5 quad</option>
@@ -85,7 +89,8 @@
 						<label for="RAM">RAM</label>
 
 						<div class="select__wrapper">
-							<select size=4 name="RAM" id="">
+							<select class="select" name="RAM" id="ram">
+								<option value="" disabled selected>Ram</option>
 								<option value="8 GB" >8 GB</option>
 								<option value="16 GB">16 GB</option>
 								<option value="32 GB">32 GB</option>
@@ -98,7 +103,8 @@
 						<label for="GPU">GPU</label>
 
 						<div class="select__wrapper">
-							<select size=4 name="GPU" id="">
+							<select class="select" name="GPU" id="gpu">
+								<option value="" disabled selected>Graphics</option>
 								<option value="GTX 1080">GTX 1080</option>
 								<option value="GTX 980M">GTX 980M</option>
 								<option value="GTX 965M">GTX 965M</option>
@@ -111,7 +117,8 @@
 						<label for="SSD">SSD</label>
 
 						<div class="select__wrapper">
-							<select size=4 name="SSD" id="">
+							<select class="select" name="SSD" id="ssd">
+								<option value="" disabled selected>Disc</option>
 								<option value="1000 GB">1000 GB</option>
 								<option value="500 GB">500 GB</option>
 								<option value="256 GB">256 GB</option>
@@ -120,10 +127,16 @@
 						</div>
 					</fieldset>
 
-					<input type="submit" value="Send!" class="submit">
+					<button type="submit" class="submit">Send!</button>
 				</form>
 
-				<div class="product__photo"></div>
+				<div class="product__container">
+
+					<div class="photo__container">
+						<div class="photo"></div>
+					</div>
+
+				</div>
 
 			</section>
 
