@@ -298,7 +298,8 @@ a {
 			}
 			.display__elems-photo {
 				// background: url(../../pictures/comp_4.jpg);
-				background-size:cover;
+				// background-size:cover;
+				max-width: 100%;
 			}
 			.nonvisible {
 				display:none;

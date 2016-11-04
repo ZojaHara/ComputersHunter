@@ -198,7 +198,7 @@ a {
     .ch__application .product__display .display__elems-alert {
       color: rgba(232, 128, 224, 0.4); }
     .ch__application .product__display .display__elems-photo {
-      background-size: cover; }
+      max-width: 100%; }
     .ch__application .product__display .nonvisible {
       display: none; }
 

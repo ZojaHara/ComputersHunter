@@ -11,10 +11,21 @@
 		 	return	Math.round(Math.random() * (max - min) + min);
 		}
 
-		function backgroundImage() {
+
+
+		function imgSource() {
 			var imageNumber = randomNumber(1,9);
-			elemsPhoto.style.cssText = "background:url(\"../pictures/comp_"+imageNumber+".jpg\") no-repeat";
-			elemsPhoto.style.backgroundSize = "cover";
+			// var numbersArray = [];
+			// numbersArray.push(imageNumber);
+			// console.log(numbersArray[0]);
+
+			elemsPhoto.src = "../pictures/comp_" + imageNumber + ".jpg";
+
+			// while(numbersArray[0]===imageNumber) {
+			// 	imageNumber = randomNumber(1,9);
+			// }
+
+			console.log(imageNumber);
 		}
 
 
@@ -35,7 +46,7 @@
 					elemsAlert.classList.add("nonvisible");
 					elemsTip.classList.add("nonvisible");
 					elemsPhoto.classList.remove("nonvisible");
-					backgroundImage();
+					imgSource();
 				}else {
 					elems = [];
 					elemsAlert.classList.remove("nonvisible");
@@ -51,7 +62,6 @@
 
 			e.preventDefault();
 			displayBox();
-
 
 		}, false);
 
