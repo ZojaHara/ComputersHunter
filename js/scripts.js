@@ -3,12 +3,26 @@
 		var form = document.querySelector("#myForm");
 		var select = document.querySelectorAll(".select");
 
+		var elemsTip = document.querySelector(".display__elems-tip");
+		var elemsAlert = document.querySelector(".display__elems-alert");
+		var elemsPhoto = document.querySelector(".display__elems-photo");
+
+		function randomNumber(max, min) {
+		 	return	Math.round(Math.random() * (max - min) + min);
+		}
+
+		function backgroundImage() {
+			var imageNumber = randomNumber(1,9);
+			elemsPhoto.style.cssText = "background:url(\"../pictures/comp_"+imageNumber+".jpg\") no-repeat";
+			elemsPhoto.style.backgroundSize = "cover";
+		}
+
 
 			var elems = [];
 			function selectValue() {
 				for(var i=0;i<select.length;i++) {
 					if(select[i].value==="") {
-						elems.push("hej");
+						elems.push(i);
 					}
 				}
 				console.log(elems);
@@ -18,9 +32,15 @@
 			function displayBox() {
 				selectValue();
 				if(elems.length===0) {
-					console.log("foto");
+					elemsAlert.classList.add("nonvisible");
+					elemsTip.classList.add("nonvisible");
+					elemsPhoto.classList.remove("nonvisible");
+					backgroundImage();
 				}else {
-					console.log("alert");
+					elems = [];
+					elemsAlert.classList.remove("nonvisible");
+					elemsTip.classList.add("nonvisible");
+					elemsPhoto.classList.add("nonvisible");
 				}
 
 			}

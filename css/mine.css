@@ -7,6 +7,9 @@ section {
   -webkit-transform: translateY(-50%) translateX(-50%);
   transform: translateY(-50%) translateX(-50%); }
 
+.visibility {
+  display: none; }
+
 a {
   text-decoration: none;
   color: inherit; }
@@ -174,15 +177,29 @@ a {
     height: 100%;
     display: flex;
     background: repeating-linear-gradient(-45deg, rgba(40, 40, 40, 0.9), rgba(40, 40, 40, 0.9) 140px, rgba(40, 40, 40, 0.7) 0, rgba(40, 40, 40, 0.7) 280px), repeating-linear-gradient(45deg, rgba(40, 40, 40, 0.9), rgba(40, 40, 40, 0.9) 140px, rgba(40, 40, 40, 0.7) 0, rgba(40, 40, 40, 0.7) 280px); }
-  .ch__application .photo__container {
+  .ch__application .product__display {
     width: 80%;
     height: 75%;
     margin: auto;
     background: #5b5b5b;
     display: flex; }
-    .ch__application .photo__container .photo {
-      margin: auto;
-      background: url(../../pictures/comp_4.jpg);
+    .ch__application .product__display .display__elems {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      font-family: 'Ruslan Display', cursive;
+      font-size: 7vmin;
+      color: #282828; }
+    .ch__application .product__display .display__elems-top {
+      color: #282828; }
+    .ch__application .product__display .display__elems-alert {
+      color: rgba(232, 128, 224, 0.4); }
+    .ch__application .product__display .display__elems-photo {
       background-size: cover; }
+    .ch__application .product__display .nonvisible {
+      display: none; }
 
 /*# sourceMappingURL=mine.css.map */
