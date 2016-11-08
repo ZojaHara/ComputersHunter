@@ -7,6 +7,8 @@
 		var elemsAlert = document.querySelector(".display__elems-alert");
 		var elemsPhoto = document.querySelector(".display__elems-photo");
 
+		var productLoader = document.querySelector(".product__loader");
+
 		function randomNumber(max, min) {
 		 	return	Math.round(Math.random() * (max - min) + min);
 		}
@@ -56,12 +58,21 @@
 
 			}
 
+			function opacity() {
+				productLoader.style.opacity = 1;
 
+				setTimeout(function(){
+						productLoader.style.cssText = "opacity:0;transition:opacity 1s linear";
+				}, 2500);
+			}
 
 		form.addEventListener("submit", function(e){
 
 			e.preventDefault();
+			productLoader.style.transition = "opacity 0s linear";
+			opacity();
 			displayBox();
+
 
 		}, false);
 
