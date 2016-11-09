@@ -27,6 +27,10 @@
     }
     .product__container {
       flex:1 .7;
+      height: 62%;
+      .product__display {
+        width: 80%;
+      }
     }
   }
 }
